@@ -4,7 +4,7 @@ namespace csharp_homework9;
 
 public class ReportGenerator
 {
-    public string GenerateReport(Document[] documents)
+    public string GenerateReport(Document[] documents, int documentCounter)
     {
         StringBuilder report = new StringBuilder();
 
@@ -13,10 +13,13 @@ public class ReportGenerator
         int totalCharacters = 0;
         
         report.AppendLine("--- REPORT ---");
-        foreach (Document document in documents)
+        for (int i = 0; i < documentCounter; i++)
         {
+            Document document = documents[i];
             toralDocuments++;
+            
             DocumentStatistics statistics = document.AnalyzeText();
+            
             report.AppendLine(document.GetInfo());
             report.AppendLine("--- Text Statistics ---");
             report.AppendLine($"Word count: {statistics.WordCount}");

@@ -3,10 +3,10 @@ namespace csharp_homework9;
 public class Report : Document
 {
     private string _department;
-    private uint _pagecount;
+    private int _pagecount;
 
     public string Department { get => _department; set => _department = value; }
-    public uint Pagecount { get => _pagecount; set => _pagecount = value; }
+    public int Pagecount { get => _pagecount; set => _pagecount = value; }
     
     public Report() : base()
     {
@@ -15,7 +15,7 @@ public class Report : Document
     }
 
     public Report(string title, string author, string text, 
-        string createAt, string department, uint pagecount) 
+        string createAt, string department, int pagecount) 
         :base(title, author, text, createAt)
     {
         if (string.IsNullOrWhiteSpace(department))

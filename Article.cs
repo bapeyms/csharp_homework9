@@ -3,10 +3,10 @@ namespace csharp_homework9;
 public class Article : Document
 {
     private string _category;
-    private uint _readtime;
+    private int _readtime;
     
     public string Category { get => _category; set => _category = value; }
-    public uint Readtime { get => _readtime; set => _readtime = value; }
+    public int Readtime { get => _readtime; set => _readtime = value; }
 
     public Article() : base()
     {
@@ -15,7 +15,7 @@ public class Article : Document
     }
 
     public Article(string title, string author, string text, 
-        string createAt, string category, uint readtime) 
+        string createAt, string category, int readtime) 
         :base(title, author, text, createAt)
     {
         if (string.IsNullOrWhiteSpace(category))

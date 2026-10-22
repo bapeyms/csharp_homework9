@@ -55,9 +55,9 @@ public abstract class Document : ITextProcessor
 
     public virtual string GetInfo()
     {
-        return $"Title: {Title}\n " +
-               $"Author: {Author}\n " +
-               $"Text: {Text}\n " +
+        return $"Title: {Title}\n" +
+               $"Author: {Author}\n" +
+               $"Text: {Text}\n" +
                $"Created At: {CreatedAt}\n";
     }
 
